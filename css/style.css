@@ -3,8 +3,27 @@
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+}
+
+.searchButton {
+  border: none;
+  padding: 8px 15px 8px 15px;
+  background: #ff8500;
+  color: #fff;
+  box-shadow: 1px 1px 4px #dadada;
+  -moz-box-shadow: 1px 1px 4px #dadada;
+  -webkit-box-shadow: 1px 1px 4px #dadada;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  outline: none;
+}
+
+.searchButton:hover {
+  background: #ea7b00;
+  color: #fff;
 }
 
 .searchBox {
@@ -15,38 +34,50 @@
 .results {
   display: flex;
   justify-content: center;
-  margin-top:2%;
+  margin-top: 2%;
 }
 
 body {
-  background: #D3CCE3;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 input {
   width: 50%;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  border: 1px solid #C2C2C2;
-  box-shadow: 1px 1px 4px #EBEBEB;
-  -moz-box-shadow: 1px 1px 4px #EBEBEB;
-  -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+  border: 1px solid #c2c2c2;
+  box-shadow: 1px 1px 4px #ebebeb;
+  -moz-box-shadow: 1px 1px 4px #ebebeb;
+  -webkit-box-shadow: 1px 1px 4px #ebebeb;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   padding: 7px;
   outline: none;
 }
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   font-weight: 500;
 }
 
 div {
   display: inline-block;
-  
 }
 
 .searchResults {
@@ -57,33 +88,40 @@ div {
 
 .imageSearchResults {
   width: 50%;
-  max-height: 100vh;
+  max-height: calc(100vh - 150px);
   overflow: scroll;
+  margin: 0 auto;
+  text-align: center;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 80%;
   object-fit: cover;
-  margin-left: 1.5%;
+  margin-top: 2%;
 }
 
 @media (max-width: 678px) {
   .results {
     display: flex;
     justify-content: center;
-    margin-top:2%;
+    margin-top: 2%;
     flex-direction: column;
     align-items: center;
   }
 
   .searchResults {
     width: 50%;
-    margin-top:2%;
+    margin-top: 2%;
   }
-  
+
   .imageSearchResults {
     width: 50%;
-    margin-top:2%;
+    margin-top: 2%;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+
   }
 }
